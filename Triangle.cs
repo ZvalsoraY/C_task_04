@@ -4,17 +4,48 @@ using System.Text;
 
 namespace C_task_04
 {
-    class Triangle
+    public class Triangle
     {
-        double a;
-        double b;
-        double c;
+        private double a;
+        private double b;
+        private double c;
+
+        private Triangle() { }
+
         public Triangle(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
             this.c = c;
+            if (PossibleTriangle(a, b, c))
+               throw new ArgumentException("Не существует треугольника с заданными параметрами");
         }
+
+        public double SideA
+        {
+            get { return a; }
+        }
+        public double SideB
+        {
+            get { return b; }
+        }
+        public double SideC
+        {
+            get { return c; }
+        }
+
+
+        //double a;
+        //double b;
+        //double c;
+        //public Triangle(double a, double b, double c)
+        //{
+        //    this.a = a;
+        //    this.b = b;
+        //    this.c = c;
+        //    if (PossibleTriangle(a, b, c))
+        //        throw new ArgumentException("Не существует треугольника с заданными параметрами");
+        //}
 
         public bool PossibleTriangle(double a, double b, double c)
         {
