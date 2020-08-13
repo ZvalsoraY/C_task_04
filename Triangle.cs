@@ -17,7 +17,7 @@ namespace C_task_04
             this.a = a;
             this.b = b;
             this.c = c;
-            if (PossibleTriangle(a, b, c))
+            if (!PossibleTriangle(a, b, c))
                throw new ArgumentException("Не существует треугольника с заданными параметрами");
         }
 

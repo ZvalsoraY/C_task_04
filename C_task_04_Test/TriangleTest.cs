@@ -3,10 +3,10 @@ using C_task_04;
 
 namespace C_task_04_Test
 {
-    [TestClass]
+    [TestClass()]
     public class TriangleTest
     {
-        [TestMethod]
+        [TestMethod()]
         public void PossibleTriangleTest()
         {
             // Arrange
@@ -25,7 +25,7 @@ namespace C_task_04_Test
             Assert.IsTrue(triangle.PossibleTriangle(a, b, c));
 
         }
-        [TestMethod]
+        [TestMethod()]
         public void PerimeterTriangleTest()
         {
             // Arrange
@@ -43,7 +43,7 @@ namespace C_task_04_Test
 
             //Assert.Fail("The expected exception was not thrown.");
         }
-        [TestMethod]
+        [TestMethod()]
         public void SquareTriangleTest()
         {
             // Arrange
@@ -51,7 +51,7 @@ namespace C_task_04_Test
             double b = 4;
             double c = 5;
             Triangle triangle = new Triangle(a, b, c);
-            Assert.AreEqual(6, triangle.PerimeterTriangle(a, b, c), 0.001, "correct");
+            Assert.AreEqual(6, triangle.SquareTriangle(a, b, c), 0.001, "correct");
         }
     }
 }
